@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>礼途酒店</title>
+<link rel="stylesheet" href="css/main.css" type="text/css">
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/main.js"></script>
+<style type="text/css">
+body{
+	background-image:url(imgs/room/background.jpg);
+	background-size:cover;
+}
+.container{
+	margin: 3% 3%;
+	width:94%;
+ 	/* height:72%;  */
+	background-color: rgba(50,42,40,.7);
+}
+.container img{
+    border: 7px solid rgb(225,198,132);
+    width: 48%;
+}
+.container p{
+	padding:3rem 0;
+	text-align:center;
+	font-size:3rem;
+	color:#fff;
+}
+</style>
+</head>
+
+<body>
+	<header>
+		<img src="imgs/index/logo.png" id="logo"/>
+		<img src="imgs/index/login.png" id="login"/>
+	</header>
+	<div class="container" align="center">
+		<h2 style="padding:8% 0 4% 0;margin:0;">酒店客房</h2>
+		<!-- 下面每一个<img>和一个<p>合为一条信息：房间图片、房间类型。数量不限。 -->
+		<img src="imgs/room/1.jpg" id="roomImg_1"/>
+		<p>贵宾房</p>
+		<img src="imgs/room/1.jpg" id="roomImg_2"/>
+		<p>总统房</p>
+	</div>
+<script>
+	$("#roomImg_1").click(function(){
+		var href = "roomInfo.html?type=" + $(this).attr("id");
+		window.location.href=href;
+	});
+</script>
+</body>
+</html>

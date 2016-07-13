@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>礼途酒店</title>
+<link rel="stylesheet" href="css/main.css" type="text/css">
+<link rel="stylesheet" href="css/index.css" type="text/css">
+<script src="scripts/jquery.min.js"></script>
+<!-- <script src="scripts/index.js"></script> -->
+<script src="scripts/main.js"></script>
+</head>
+
+<body>
+	<header>
+		<img src="imgs/index/logo.png" id="logo"/>
+		<img src="imgs/index/login.png" id="login"/>
+	</header>
+	<div class="title">
+		<h1>尊享礼遇，精彩通途</h1>
+		<p>ENJOY YOUR LIKTO TIME!</p>
+	</div>
+	<div class="container">
+		<div style="margin-right:26%;">
+			<img src="imgs/index/1.png" id="1"/>
+			<img src="imgs/index/3.png" id="3"/>
+			<img src="imgs/index/5.png" id="5"/>
+		</div>
+		<div>
+			<img src="imgs/index/2.png" id="2"/>
+			<img src="imgs/index/4.png" id="4"/>
+			<img src="imgs/index/6.png" id="6"/>
+		</div>
+	</div>
+<script>
+//js
+$(document).ready(function(){
+	$("#1").click(function(){window.location.href="introduce.html"});
+	$("#2").click(function(){window.location.href="consult.html"});
+	$("#3").click(function(){window.location.href="room.html"});
+	$("#4").click(function(){window.location.href="restaurant.html";});
+	$("#5").click(function(){window.location.href="introduce.html?page=4"});
+	$("#6").click(function(){window.location.href="info.html"});
+})
+</script>
+</body>
+</html>

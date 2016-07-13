@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>礼途酒店</title>
+<link rel="stylesheet" href="css/main.css" type="text/css">
+<link rel="stylesheet" href="css/introduce.css" type="text/css">
+<script src="scripts/jquery.min.js"></script>
+<!-- <script src="scripts/main.js"></script> -->
+<script src="scripts/introduce.js"></script>
+</head>
+<body>
+	<img src="imgs/introduce/background.jpg" id="bg"/>
+	<header>
+		<a href="index.html"><img src="imgs/index/logo.png" id="logo"/></a>
+		<img src="imgs/index/login.png" id="login"/>
+	</header>
+	<!-- 分页导航 -->
+	<ul class="nav">
+		<li id="0" style="color:#e1c684;background-color:#262120;">酒店介绍</li>
+		<li id="1" >功能介绍</li>
+		<li id="2">特色介绍</li>
+		<li id="3">酒店动态与活动</li>
+		<div id="selectRect"></div>
+	</ul>
+	<div class="container">
+		<!-- 此ul下包含四个分页面的内容 -->
+		<ul class="introOuter">
+			<li class="_hotelIntro">
+				<!-- 在下面这个div中放入信息：标题、内容、图片，下同。此处已经插入了示例信息 -->
+				<div class="introInner">
+					<h2>酒店介绍</h2>
+					<p>礼途酒店是广东盛大投资集团旗下的精品商务酒店。酒店位于全新的广州中央商务区——广州市越秀区建设六马路46号，紧邻广东省人民政府、广东省委党校和友谊商店、丽柏广场、世贸大厦等建筑群。酒店地处交通便利的商业中心地带，步行8分钟可到达地铁五号线淘金站，距离机场仅40分钟车程。<br>
+					礼途酒店拥有83间风格简约雅致、操作科技智能化的各式客房，为酒店的客人提供贴心、周到的入住体验。酒店首层是充满设计元素的餐吧，为追求品质的您提供佳肴与美酒，享受繁华闹市中的松弛与畅快。</p>
+					<img src="imgs/introduce/intro_1.jpg"/>
+				</div>
+			</li>
+			<li class="_hotelIntro">
+				<div class="introInner">
+					<h2>功能介绍</h2>
+					<p>礼途酒店是广东盛大投资集团旗下的精品商务酒店。酒店位于全新的广州中央商务区——广州市越秀区建设六马路46号，紧邻广东省人民政府、广东省委党校和友谊商店、丽柏广场、世贸大厦等建筑群。酒店地处交通便利的商业中心地带，步行8分钟可到达地铁五号线淘金站，距离机场仅40分钟车程。<br>
+					礼途酒店拥有83间风格简约雅致、操作科技智能化的各式客房，为酒店的客人提供贴心、周到的入住体验。酒店首层是充满设计元素的餐吧，为追求品质的您提供佳肴与美酒，享受繁华闹市中的松弛与畅快。</p>
+					<img src="imgs/introduce/intro_1.jpg"/>
+				</div>
+			</li>
+			<li class="_hotelIntro">
+				<div class="introInner">
+					<h2>特色介绍</h2>
+					<p>礼途酒店是广东盛大投资集团旗下的精品商务酒店。酒店位于全新的广州中央商务区——广州市越秀区建设六马路46号，紧邻广东省人民政府、广东省委党校和友谊商店、丽柏广场、世贸大厦等建筑群。酒店地处交通便利的商业中心地带，步行8分钟可到达地铁五号线淘金站，距离机场仅40分钟车程。<br>
+					礼途酒店拥有83间风格简约雅致、操作科技智能化的各式客房，为酒店的客人提供贴心、周到的入住体验。酒店首层是充满设计元素的餐吧，为追求品质的您提供佳肴与美酒，享受繁华闹市中的松弛与畅快。</p>
+					<img src="imgs/introduce/intro_1.jpg"/>
+				</div>
+			</li>
+			<li class="_hotelIntro">
+				<div class="introInner">
+					<h2>酒店动态与活动</h2>
+					<!-- 下面每一个li为一条活动信息：活动图片、标题、时间、内容。li的数量可随意增删。 -->
+					<!-- <li>标签的value值为后台添加新活动时生成的索引值，作为参数传递到详情页，见本页底部js -->
+					<ul>
+						<li value="1" onclick="jump(this.value)">
+							<img src="imgs/introduce/intro_2.jpg"/>
+							<div>
+								<p>国庆大回馈</p>
+								<p>>2015-10-01</p>
+								<p>国庆期间在线预订可享受8.8折优惠，详情请致电，我们将推出亲子套餐、情侣套餐、商务套餐等各种各样的优惠活动，满足大家的需求...</p>
+							</div>
+							
+						</li>
+						<li value="1" onclick="jump(this.value)">
+							<img src="imgs/introduce/intro_3.jpg"/>
+							<div>
+								<p>国庆大回馈</p>
+								<p>>2015-10-01</p>
+								<p>国庆期间在线预订可享受8.8折优惠，详情请致电，我们将推出亲子套餐、情侣套餐、商务套餐等各种各样的优惠活动，满足大家的需求...</p>
+							</div>
+						</li>
+						<li value="1" onclick="jump(this.value)">
+							<img src="imgs/introduce/intro_4.jpg"/>
+							<div>
+								<p>国庆大回馈</p>
+								<p>>2015-10-01</p>
+								<p>国庆期间在线预订可享受8.8折优惠，详情请致电，我们将推出亲子套餐、情侣套餐、商务套餐等各种各样的优惠活动，满足大家的需求...</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+		<div id="scrollGradient"></div>
+	</div>
+<script>
+window.onload=function(){alert("ready!")}
+	function jump(index){
+		window.location.href="activity.html?index="+index;
+	}
+</script>
+</body>
+</html>

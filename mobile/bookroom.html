@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>礼途酒店</title>
+<!-- <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" /> -->
+<link rel="stylesheet" href="css/main.css" type="text/css">
+<link rel="stylesheet" href="css/bookroom.css" type="text/css">
+<link rel="stylesheet" href="mobilescroll/style/mobiscroll.2.13.2.css" type="text/css">
+<script src="mobilescroll/script/jquery-1.9.1.js"></script>
+<script src="mobilescroll/script/mobiscroll.2.13.2.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/bookroom.js"></script>
+</head>
+<body>
+	<header>
+		<img src="imgs/index/logo.png" id="logo"/>
+		<img src="imgs/index/login.png" id="login"/>
+	</header>
+	<div class="container">
+		<h2 style="padding:4% 0 4% 0;margin:0;">在线预订</h2>
+		<!-- 所有信息均在这个表单中 -->
+		<form action="xxx.php" method="get" >
+			<div class="time" style="margin:0 8%;width:84%;">
+				<p>入住时间</p>
+				<input id="scroller_in"/>
+				<p class="rightText" id="leaveTime" style="display:none;">离开时间</p>
+				<input id="scroller_out" style="display:none;"/>
+				<!-- 下面是计算好的入住天数，数值储存在value属性中 -->
+				<input id="days" style="display:none" value="null"/>
+			</div>
+			<div class="customInfo" style="position:relative;">
+					<p class="adapter_2">房型</p>
+					<select class="input">
+						<option value="1">单人间</option>
+						<option value="2">标准间</option>
+						<option value="3">商务套房</option>
+						<option value="4">总统套房</option>
+					</select>
+					<p class="adapter_1 rightText">房数量</p>
+					<input type="text" class="input" name="roomAccount"/><br>
+					<p class="adapter_2">成人</p>
+					<input type="text" class="input" name="adult"/>
+					<p class="adapter_2 rightText">儿童</p>
+					<input type="text" class="input" name="children"/><br>
+					<p>客人偏好</p>
+					<input type="text" class="input" name="favour"/>
+					<p class="adapter_2 rightText">手机号码</p>
+					<input type="text" class="input" name="phoneNumber"/><br>
+					<p class="adapter_2">备注</p>
+					<textarea id="remarks" name="remarks"></textarea><br>
+					<p id="phoneNumber">服务热线 202-6189-7333</p>
+					<a href="#" class="submitBtn" style="position:absolute;bottom:4%;">立即预订</a>
+			</div>
+		</form>
+		<div class="priceList">
+			<h2 style="font-size:4rem;">房价表</h2>
+			<!-- 以下每个<ul>为一条房价信息 -->
+			<ul class="PL_dark">
+				<li>房价类型</li>
+				<li>门市价</li>
+				<li>线上预定价</li>
+				<li>会员价</li>
+			</ul>
+			<ul class="PL_light">
+				<li>单人间</li>
+				<li>308元</li>
+				<li>178元</li>
+				<li>158元</li>
+			</ul>
+			<ul class="PL_dark">
+				<li>标准间</li>
+				<li>308元</li>
+				<li>188元</li>
+				<li>168元</li>
+			</ul>
+			<ul class="PL_light">
+				<li>商务套房</li>
+				<li>398元</li>
+				<li>208元</li>
+				<li>188元</li>
+			</ul>
+			<ul class="PL_dark">
+				<li>豪华套房</li>
+				<li>458元</li>
+				<li>288元</li>
+				<li>268元</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

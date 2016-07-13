@@ -1,0 +1,9 @@
+$(document).ready(function(){
+	//页面头部事件
+	$("#login").click(function(){
+		alert("会员系统筹备中...")
+	})
+	$("#logo").click(function(){
+		window.location.href="index.html";
+	})
+})
