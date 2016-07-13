@@ -1,0 +1,7 @@
+body{
+	background-image:url(../images/first_page_bg.jpg);
+	background-size:cover;
+}
+body,html {
+	height:100%;
+}

@@ -1,0 +1,139 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>礼途酒店</title>
+<link type="text/css" rel="stylesheet" href="css/main.css">
+<link type="text/css" rel="stylesheet" href="css/restaurant.css">
+<script src="mobilescroll/script/jquery-1.9.1.js"></script>
+</head>
+<body onresize="containerSizer()">
+	<div id="content">
+		<img id="bgImg" src="images/restaurant_bg.jpg"/>
+		<div id="header">
+			<div class="headerInner">
+				<img alt="logo" src="images/logo.png">
+				<div id="nav">
+					<ul>
+						<li><a href="index.html">首&nbsp;&nbsp;页</a></li>
+						<li><a href="introduce.html">酒店介绍</a></li>
+						<li><a href="room.html">酒店客房</a></li>
+						<li class="topSelector"><a href="restaurant.html">酒店餐饮</a></li>
+						<li><a href="info.html">周边信息</a></li>
+						<li><a href="bookroom.html">在线预订</a></li>
+						<li><a href="consult.html">酒店咨询</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="container">
+			<div class="containerTitle">
+				<img src="images/introduce_mini_logo.png" />
+				<h3>酒店餐饮</h3>
+				<p style="color:rgb(225,198,132);">/ Hotel & Restaurant</p>
+				<p class="rightText" id="position">你当前的位置：酒店餐饮</p>
+			</div>
+			<div class="titleLines">
+				<div class="linesLeft"></div><div class="linesRight"></div>
+			</div>
+			<div class="informations">
+				<ul>
+					<li id="1" class="page">
+						<div style="margin-left:0;">
+							<img src="images/restaurant_1.jpg"/>
+						</div><div>
+							<img src="images/restaurant_2.jpg" />
+						</div><div>
+							<img src="images/restaurant_3.jpg" />
+						</div>
+					</li>
+					<li id="2" class="page" style="display:none;">
+						<div style="margin-left:0;">
+							<img src="images/restaurant_2.jpg"/>
+						</div><div>
+							<img src="images/restaurant_1.jpg" />
+						</div><div>
+							<img src="images/restaurant_3.jpg" />
+						</div>
+					</li>
+					<li id="3" class="page" style="display:none;">
+						<div style="margin-left:0;">
+							<img src="images/restaurant_3.jpg"/>
+						</div><div>
+							<img src="images/restaurant_2.jpg" />
+						</div><div>
+							<img src="images/restaurant_1.jpg" />
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="digg"> 
+				<a href="javascript:pre()"><span id="pageBtn_pre" class="disabled">&lt; 上一页</span></a>
+				<a href="javascript:jumpTo(1)"><span id="pageBtn_1" class="current">1</span></a>
+				<a href="javascript:jumpTo(2)"><span id="pageBtn_2">2</span></a>
+				<a href="javascript:jumpTo(3)"><span id="pageBtn_3">3</span></a>
+				<a href="javascript:next()"><span id="pageBtn_next">下一页 &gt;</span></a>
+			</div> 
+		</div>
+	</div>
+	<div id="footer">
+		<div>
+			<p style="padding-right:30%;">© 2015 礼途酒店版权所有</p>
+			<p>合作机构：广州盛大投资集团有限公司、广州祈尔酒店管理公司</p>
+		</div>
+	</div>
+<script>
+	function containerSizer(){
+		document.getElementById("container").style.height = document.body.clientHeight*.66+"px";
+	};
+	containerSizer();
+	//以下为跳页逻辑
+	var pageAccount = $(".informations ul li").length;
+	function next(){
+		var page = parseInt($(".current").html());
+		if (page == pageAccount) return;
+		page++;
+		checkCurrentPage(page);
+		$(".informations .page").hide();
+		$(".digg #pageBtn_"+page).addClass("current");
+		$(".informations #"+page).show();
+		page--;
+		$(".digg #pageBtn_"+page).removeClass("current");
+	};
+	function pre(){
+		var page = parseInt($(".current").html());
+		page--;
+		checkCurrentPage(page);
+		if (page <= 0) return;
+		$(".informations .page").hide();
+		$(".digg #pageBtn_"+page).addClass("current");
+		$(".informations #"+page).show();
+		page++;
+		$(".digg #pageBtn_"+page).removeClass("current");
+	};
+	function jumpTo(pageNum){
+		checkCurrentPage(pageNum);
+		$(".informations .page").hide();
+		$(".digg .current").removeClass("current");
+		$(".digg #pageBtn_"+pageNum).addClass("current");
+		$(".informations #"+pageNum).show();
+
+	};
+	function checkCurrentPage(pageNum){
+		if(pageNum <= 1) {
+			$("#pageBtn_pre").addClass("disabled");
+			$("#pageBtn_next").removeClass("disabled");
+			return;
+		}
+		if(pageNum >= pageAccount) {
+			$("#pageBtn_next").addClass("disabled");
+			$("#pageBtn_pre").removeClass("disabled");
+			return;
+		}
+		else{
+			$("#pageBtn_pre").removeClass("disabled");
+			$("#pageBtn_next").removeClass("disabled");
+		}
+	}
+</script>
+</body>
+</html>

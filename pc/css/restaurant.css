@@ -1,0 +1,57 @@
+#container{
+	padding:1.5%;
+	margin:3% 10% 0 10%;
+	background-color:rgb(50,42,40);
+	background-color:rgba(50,42,40,.7);
+	filter: alpha(opacity = 90);
+}
+#container .informations{width:99.6%;margin:0 .2%;}
+#container .informations img{
+	display:inline-block;
+	width:100%;
+	margin:-2px;
+	border:2px solid rgb(225,198,132);
+}
+#container .informations ul{list-style:none;padding:0;}
+#container .informations ul li div{
+	position:relative;
+	display:inline-block;
+	width:26%;
+	height:26%;
+	margin:2em 11% 4em 11%;
+	margin-right:0;
+}
+/* 换页按钮样式 */
+DIV.digg { 
+	PADDING:3px;
+	MARGIN:3px;
+	TEXT-ALIGN:center; 
+	COLOR:#fff;
+} 
+DIV.digg A { 
+	PADDING:2px 5px;
+	MARGIN:2px; 
+	COLOR:#fff;
+	TEXT-DECORATION: none 
+} 
+DIV.digg A:hover { 
+	COLOR:rgb(225,198,132);
+} 
+DIV.digg A:active { 
+	COLOR:#000;
+} 
+.digg .current { 
+	PADDING:2px 5px;
+	FONT-WEIGHT: bold;
+	MARGIN: 2px;
+	COLOR: #fff;
+	BACKGROUND-COLOR: rgb(225,198,132);
+} 
+.digg .disabled { 
+	/* PADDING:2px 5px; */
+	/* MARGIN: 2px; */
+	COLOR: #999;
+} 
+.digg a span {
+	PADDING:2px 5px;
+}

@@ -1,0 +1,102 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>礼途酒店</title>
+<link type="text/css" rel="stylesheet" href="css/main.css">
+<style>
+#container{
+	padding:1.5%;
+	margin:3% 10% 0 10%;
+	background-color:rgb(50,42,40);
+	background-color:rgba(50,42,40,.7);
+	filter: alpha(opacity = 90);
+}
+#container .links *{
+	display:inline-block;
+	padding-right:1em;
+	color:#fff;
+}
+#container .links{
+	margin:1em 0;
+}
+#container .informations p{
+	display:inline-block;
+	vertical-align:top;
+	width:60%;
+	line-height:1.9em;
+}
+#container .informations  img{
+	display:inline-block;
+	width:38%;
+	margin-left:2%;
+}
+</style>
+</head>
+<body onresize="containerSizer()">
+	<div id="content">
+		<img id="bgImg" src="images/info_bg.jpg"/>
+		<div id="header">
+			<div class="headerInner">
+				<img alt="logo" src="images/logo.png">
+				<div id="nav">
+					<ul>
+						<li><a href="index.html">首&nbsp;&nbsp;页</a></li>
+						<li><a href="introduce.html">酒店介绍</a></li>
+						<li><a href="room.html">酒店客房</a></li>
+						<li><a href="restaurant.html">酒店餐饮</a></li>
+						<li class="topSelector"><a href="info.html">周边信息</a></li>
+						<li><a href="bookroom.html">在线预订</a></li>
+						<li><a href="consult.html">酒店咨询</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="container">
+			<div class="containerTitle">
+				<img src="images/introduce_mini_logo.png" />
+				<h3>周边信息</h3>
+				<p style="color:rgb(225,198,132);">/ Area Information</p>
+				<p class="rightText" id="position">你当前的位置：周边信息</p>
+			</div>
+			<div class="titleLines">
+				<div class="linesLeft"></div><div class="linesRight"></div>
+			</div>
+			<div class="links">
+				<p>友情链接：</p>
+				<a href="#">友谊商店</a>
+				<a href="#">莉莉玛莲</a>
+				<a href="#">法国紫色餐厅</a>
+			</div>
+			<div class="informations">
+				<p>
+				建设六马路<br>
+				酒吧：DUO Club<br>
+				餐吧：塔克西小酒馆、Tomatoes、9号花园<br>
+				餐厅：1920德国餐厅、鹿鼎记、铂益西餐厅、上楼茶点餐厅、香兰印尼餐厅、曼谷5巷、加州卷、Amazing Remix、永盈茶餐厅、四方九格重庆火锅、拉丁餐厅、麦当劳、特基拉餐厅<br>
+				咖啡厅：星巴克<br>
+				银行：邮政银行、光大银行、农业银行、工商银行、建设银行、中国银行<br>
+				服饰：Single Life DS、H&M<br>
+				美容美发：尼尔发廊<br>
+				政府机构：华乐街派出所<br>
+				建设五马路<br>
+				酒吧：Hunting、DownTown、Kingson Four<br>
+				餐吧：Happy Monk、101 Bar、<br>
+				餐厅：Oggi Trattoria意大利餐厅、Party Night琶缇奈特、卡真屋美式海鲜餐厅、嘴刁刁主题
+				</p><a href="http://j.map.baidu.com/GTmKC"><img src="images/info_map.jpg" id="map"/></a>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div>
+			<p style="padding-right:30%;">© 2015 礼途酒店版权所有</p>
+			<p>合作机构：广州盛大投资集团有限公司、广州祈尔酒店管理公司</p>
+		</div>
+	</div>
+<script>
+	function containerSizer(){
+		document.getElementById("container").style.height = document.body.clientHeight*.66+"px";
+	}
+	containerSizer();
+</script>
+</body>
+</html>
