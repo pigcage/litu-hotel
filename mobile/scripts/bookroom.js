@@ -89,7 +89,7 @@ $(document).ready(function(){
 			return false;
 		}
 		var pattern = /^1[34578]\d{9}$/;  
-		if(!pattern.test(phoneNumber)) {
+		if(!pattern.test(phoneNumber.val())) {
 			phoneNumber.val("");
 			alert("请输入正确的手机号码");
 			return false;
