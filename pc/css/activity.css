@@ -1,0 +1,26 @@
+#container{
+	padding:1.5%;
+	margin:3% 10% 0 10%;
+	background-color:rgb(50,42,40);
+	background-color:rgba(50,42,40,.7);
+	filter: alpha(opacity = 90);
+}
+#container .informations img{
+	display:inline-block;
+	margin-top:3em;
+	width:20%;
+}
+#container .informations div h2{
+	margin:0 0 1em 0;
+	color:rgb(225,198,132);
+}
+#container .informations div p{line-height:1.8em;}
+#container .informations .activityInfo{
+	display:inline-block;
+	vertical-align:top;
+	margin-top:3em;
+	margin-left:5%;
+	width:75%;
+	max-height:25em;
+	overflow:auto;
+}

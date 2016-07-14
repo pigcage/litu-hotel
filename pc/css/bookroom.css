@@ -62,6 +62,7 @@
 	padding:.7em 0;
 	border-left:1px solid rgb(52,41,34);
 	width:25%;
+	overflow-x:hidden;
 	font-size:1em;
 	text-align:center;
 	color:#fff;

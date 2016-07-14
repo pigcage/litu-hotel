@@ -1,9 +1,10 @@
+//js
 $(document).ready(function(){
-	function addEvent(){
+	$(function () {
 		//当前日期
-		var currYear = (new Date()).getFullYear();
+		var currYear = (new Date()).getFullYear(); 
 		var currMonth = (new Date()).getMonth();
-		var currDate = (new Date()).getDate();
+		var currDate = (new Date()).getDate(); 
 		//日期选择初始化
 		var opt={};
 		opt.date = {
@@ -14,7 +15,7 @@ $(document).ready(function(){
 		};
 		opt.datetime = {preset : 'datetime'};
 		opt.time = {preset : 'time'};
-		opt.default_1 = {
+		opt.default = {
 			theme: 'android-ics light', //皮肤样式
 			display: 'modal', //显示方式
 			mode: 'scroller', //日期选择模式
@@ -23,8 +24,8 @@ $(document).ready(function(){
 			showNow: true,
 			nowText: "今天",
 		};
-		$("#scroller_in").mobiscroll($.extend(opt['date'], opt['default_1']));
-		$("#scroller_out").mobiscroll($.extend(opt['date'], opt['default_1']));
+		$("#scroller_in").mobiscroll($.extend(opt['date'], opt['default']));
+		$("#scroller_out").mobiscroll($.extend(opt['date'], opt['default']));
 		function appendOut(vt){	
 			vt = vt.split("-");
 			var opt_2={};
@@ -35,7 +36,7 @@ $(document).ready(function(){
 			};
 			opt_2.datetime = {preset : 'datetime'};
 			opt_2.time = {preset : 'time'};
-			opt_2.default_1 = {
+			opt_2.default = {
 				theme: 'android-ics light',
 				display: 'modal',
 				mode: 'scroller',
@@ -44,12 +45,11 @@ $(document).ready(function(){
 				showNow: true,
 				nowText: "今天",
 			};
-			$("#scroller_out").mobiscroll($.extend(opt_2['date'], opt_2['default_1']));
-			$("#leaveTime").show();
-			$("#scroller_out").show();
+			$("#scroller_out").mobiscroll($.extend(opt_2['date'], opt_2['default']));
+			$("#leaveTime").css("visibility","visible");
+			$("#scroller_out").css("visibility","visible");
 		}
-	};
-	addEvent();
+	});
 	//计算入住天数，判断正确性
 	function DateDiff(sDate1,sDate2){
 		if(sDate1=="" || sDate2==""){
@@ -69,7 +69,6 @@ $(document).ready(function(){
 		$("#days").val(iDays);
 		return;
 	}
-	$("select").css("width",$("input[name=roomAccount]").outerWidth()+"px");
 	//检查输入
 	function checkInput(){
 		var roomAccount = $("input[name='roomAccount']");
@@ -108,7 +107,4 @@ $(document).ready(function(){
 			}
 		}
 	})
-	$("select").css("width",$("input[name=roomAccount]").outerWidth()+"px");
-	$("#loginBtn").css("height",$(".links").outerHeight()+"px");
-	$("#loginBtn").click(function(){alert("会员系统筹备中...")})
 });

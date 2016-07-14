@@ -127,8 +127,8 @@ DIV.digg {
 	COLOR:#fff;
 } 
 DIV.digg A { 
-	PADDING:2px 5px;
-	MARGIN:2px; 
+	PADDING:2px 0px;
+	MARGIN:2px 0; 
 	COLOR:#fff;
 	TEXT-DECORATION: none 
 } 
@@ -141,7 +141,7 @@ DIV.digg A:active {
 .digg .current { 
 	PADDING:2px 5px;
 	FONT-WEIGHT: bold;
-	MARGIN: 2px;
+	MARGIN: 2px 0;
 	COLOR: #fff;
 	BACKGROUND-COLOR: rgb(225,198,132);
 } 

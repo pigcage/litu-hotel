@@ -20,10 +20,10 @@
 		<img id="bgImg" src="images/restaurant_bg.jpg"/>
 		<div id="header">
 			<div class="headerInner">
-				<img alt="logo" src="images/logo.png">
+				<a href="index.html"><img alt="logo" src="images/logo.png"></a>
 				<div id="nav">
 					<ul>
-						<li><a href="index.html">首&nbsp;&nbsp;页</a></li>
+						<li><a href="index.html">首&#12288;&#12288;页</a></li>
 						<li><a href="introduce.html">酒店介绍</a></li>
 						<li class="topSelector"><a href="room.html">酒店客房</a></li>
 						<li><a href="restaurant.html">酒店餐饮</a></li>
@@ -46,45 +46,48 @@
 			</div>
 			<div class="informations">
 				<ul>
+					<!-- 下面每个<li>为一个分页，除首页外均用display:none隐藏 -->
 					<li id="1" class="page">
 						<div style="margin-left:0;">
-							<a href="#"><img src="images/room_1.jpg"/></a>
+							<!-- 单个图片放在<a>标签内，点击打开房间详情页，根据链接后的参数roomtype判定显示何种房型的信息 -->
+							<a href="roomInfo.html?roomtype=1"><img src="images/room_1.jpg"/></a>
 							<p>贵宾房</p>
 						</div><div>
-							<a href="#"><img src="images/room_2.jpg" /></a>
+							<a href="roomInfo.html?roomtype=2"><img src="images/room_2.jpg" /></a>
 							<p>总统套房</p>
 						</div><div>
-							<a href="#"><img src="images/room_3.jpg" /></a>
+							<a href="roomInfo.html?roomtype=3"><img src="images/room_3.jpg" /></a>
 							<p>豪华双人房</p>
 						</div>
 					</li>
 					<li id="2" class="page" style="display:none;">
 						<div style="margin-left:0;">
-							<a href="#"><img src="images/room_2.jpg"/></a>
+							<a href="roomInfo.html?roomtype=4"><img src="images/room_2.jpg"/></a>
 							<p>贵宾房</p>
 						</div><div>
-							<a href="#"><img src="images/room_1.jpg" /></a>
+							<a href="roomInfo.html?roomtype=5"><img src="images/room_1.jpg" /></a>
 							<p>总统套房</p>
 						</div><div>
-							<a href="#"><img src="images/room_3.jpg" /></a>
+							<a href="roomInfo.html?roomtype=6"><img src="images/room_3.jpg" /></a>
 							<p>豪华双人房</p>
 						</div>
 					</li>
 					<li id="3" class="page" style="display:none;">
 						<div style="margin-left:0;">
-							<a href="#"><img src="images/room_3.jpg"/></a>
+							<a href="roomInfo.html?roomtype=7"><img src="images/room_3.jpg"/></a>
 							<p>贵宾房</p>
 						</div><div>
-							<a href="#"><img src="images/room_2.jpg" /></a>
+							<a href="roomInfo.html?roomtype=8"><img src="images/room_2.jpg" /></a>
 							<p>总统套房</p>
 						</div><div>
-							<a href="#"><img src="images/room_1.jpg" /></a>
+							<a href="roomInfo.html?roomtype=9"><img src="images/room_1.jpg" /></a>
 							<p>豪华双人房</p>
 						</div>
 					</li>
 				</ul>
 			</div>
 			<div class="digg"> 
+				<!-- jumpTo()的参数值为页码，class="current"为当前页样式 -->
 				<a href="javascript:pre()"><span id="pageBtn_pre" class="disabled">&lt; 上一页</span></a>
 				<a href="javascript:jumpTo(1)"><span id="pageBtn_1" class="current">1</span></a>
 				<a href="javascript:jumpTo(2)"><span id="pageBtn_2">2</span></a>
@@ -106,6 +109,7 @@
 	containerSizer();
 	//以下为跳页逻辑
 	var pageAccount = $(".informations ul li").length;
+	//后一页
 	function next(){
 		var page = parseInt($(".current").html());
 		if (page == pageAccount) return;
@@ -117,6 +121,7 @@
 		page--;
 		$(".digg #pageBtn_"+page).removeClass("current");
 	};
+	//前一页
 	function pre(){
 		var page = parseInt($(".current").html());
 		page--;
@@ -128,6 +133,7 @@
 		page++;
 		$(".digg #pageBtn_"+page).removeClass("current");
 	};
+	//跳页
 	function jumpTo(pageNum){
 		checkCurrentPage(pageNum);
 		$(".informations .page").hide();
@@ -136,6 +142,7 @@
 		$(".informations #"+pageNum).show();
 
 	};
+	//页码检测，调整样式
 	function checkCurrentPage(pageNum){
 		if(pageNum <= 1) {
 			$("#pageBtn_pre").addClass("disabled");

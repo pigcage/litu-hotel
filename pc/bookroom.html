@@ -4,15 +4,17 @@
 <title>礼途酒店</title>
 <link type="text/css" rel="stylesheet" href="css/main.css">
 <link type="text/css" rel="stylesheet" href="css/bookroom.css">
+<link rel="stylesheet" href="mobilescroll/style/mobiscroll.2.13.2.css" type="text/css">
 <script src="mobilescroll/script/jquery-1.9.1.js"></script>
-<script src="scripts/introduce.js"></script>
+<script src="mobilescroll/script/mobiscroll.2.13.2.js"></script>
+<script src="scripts/bookroom.js"></script>
 </head>
 <body onresize="containerSizer()">
 	<div id="content">
 		<img id="bgImg" src="images/consult_bg.jpg"/>
 		<div id="header">
 			<div class="headerInner">
-				<img alt="logo" src="images/logo.png">
+				<a href="index.html"><img alt="logo" src="images/logo.png"></a>
 				<div id="nav">
 					<ul>
 						<li><a href="index.html">首&#12288;&#12288;页</a></li>
@@ -37,7 +39,7 @@
 				<div class="linesLeft"></div><div class="linesRight"></div>
 			</div>
 			<div class="informations" align="center">
-				<form action="xxx.php" method="get" >
+				<form action="xxx.php" method="get" id="form">
 					<p>入住时间</p><input id="scroller_in" class="inputs"/><p id="leaveTime" style="visibility:hidden;">&#12288;&#12288;&#12288;&#12288;离开时间</p><input  class="inputs"id="scroller_out" style="visibility:hidden;"/><br>
 					<!-- 下面是计算好的入住天数，数值储存在value属性中 -->
 					<input id="days" style="display:none" value="null"/>

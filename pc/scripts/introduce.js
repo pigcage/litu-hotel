@@ -47,3 +47,34 @@ function checkCurrentPage(pageNum){
 		$("#pageBtn_next").removeClass("disabled");
 	}
 }
+
+//左侧列表
+var title = $(".containerViceTitle ul li");
+var content = $(".containerContent ul li");
+title.click(function(){
+	for(var i=0;i<4;i++){
+		$(title[i]).children("img").hide();
+	}
+	$(this).children("img").show();
+	var index = $(this).val();
+	for(i=0;i<4;i++){
+		$(content[i]).hide();
+	}
+	$(content[index]).show();
+	switch(index){
+		case 0:
+			$("#position").html("你当前的位置：酒店介绍 > 酒店简介");
+			break;
+		case 1:
+			$("#position").html("你当前的位置：酒店介绍 > 功能介绍");
+			break;
+		case 2:
+			$("#position").html("你当前的位置：酒店介绍 > 特色介绍");
+			break;
+		case 3:
+			$("#position").html("你当前的位置：酒店介绍 > 酒店动态与活动");
+			break;
+		default:
+			break;
+	}
+})

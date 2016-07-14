@@ -14,7 +14,7 @@
 		<img id="bgImg" src="images/consult_bg.jpg"/>
 		<div id="header">
 			<div class="headerInner">
-				<img alt="logo" src="images/logo.png">
+				<a href="index.html"><img alt="logo" src="images/logo.png"></a>
 				<div id="nav">
 					<ul>
 						<li><a href="index.html">首&#12288;&#12288;页</a></li>
@@ -33,19 +33,20 @@
 				<img src="images/introduce_mini_logo.png" />
 				<h3>酒店客房</h3>
 				<p style="color:rgb(225,198,132);">/ Hotel Rooms</p>
-				<p class="rightText" id="position">你当前的位置：酒店客房</p>
+				<p class="rightText" id="position">你当前的位置：酒店客房 > 房间详情</p>
 			</div>
 			<div class="titleLines">
 				<div class="linesLeft"></div><div class="linesRight"></div>
 			</div>
 			<div class="informations">
+				<!-- 下为房间详情信息：图片、标题、内容 -->
 				<img src="images/roomInfo_pic1.jpg" /><div class="roomInfo">
 				<h4>总统套房</h4>
 				<p>·83间格简约雅致的客房，其中豪华双人房23间，豪华大床房房56间，豪华套房4间<br>
 				·充满设计元素的CLK餐吧，提供各式美食、美酒以及雪茄，并设有Vip室<br>
 				·负一层和户外停车场<br></p>
 				<ul>
-					<!-- 每个<li>为一个房型 -->
+					<!-- 每个<li>为一个房型，点击立即预定均跳到订房页面 -->
 					<li>
 						<p>豪华双人房</p>
 						<div>
@@ -97,6 +98,7 @@
 		document.getElementById("container").style.height = document.body.clientHeight*.66+"px";
 	}
 	containerSizer();
+	//滚动条样式
     (function($){
         $(window).on("load",function(){
             $(".roomInfo").mCustomScrollbar({

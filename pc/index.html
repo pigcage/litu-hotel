@@ -14,11 +14,10 @@
 		<img id="bgImg" src="images/first_page_bg.jpg"/>
 		<div id="header">
 			<div class="headerInner">
-				<img alt="logo" src="images/logo.png">
-			
+				<a href="index.html"><img alt="logo" src="images/logo.png"></a>
 				<div id="nav">
 					<ul>
-						<li class="topSelector"><a href="index.html">首&nbsp;&nbsp;页</a></li>
+						<li class="topSelector"><a href="index.html">首&#12288;&#12288;页</a></li>
 						<li><a href="introduce.html">酒店介绍</a></li>
 						<li><a href="room.html">酒店客房</a></li>
 						<li><a href="restaurant.html">酒店餐饮</a></li>
@@ -36,33 +35,36 @@
 			</div>
 			<div class="bookRoom box">
 				<h2>现在预定 / BOOK NOW</h2>
-				<div style="display:block;">
-					<p>入住时间</p>
-					<input id="scroller_in"/><p class="rightText" id="leaveTime" style="display:none;">离开时间</p>
-					<input id="scroller_out" style="display:none;"/>
-					<!-- 下面是计算好的入住天数，数值储存在value属性中 -->
-					<input id="days" style="display:none" value="null"/>
-				</div>
-				<div>
-					<p>房型</p>
-					<select>
-						<option value="1">单人房</option>
-						<option value="2">标准房</option>
-						<option value="3">商务套房</option>
-						<option value="4">总统套房</option>
-					</select><p class="rightText">房间数量</p>
-					<input name="roomAccount" type="text"/>
-				</div>
-				<div>
-					<p>成人数量</p>
-					<input/><p class="rightText">儿童数量</p>
-					<input/>
-				</div>
-				<div>
-					<p>手机号码</p>
-					<input/>
-					<a href="#" class="submitBtn" style="">立即预订</a>
-				</div>
+				<!-- 订房信息表单 -->
+				<form action="xxx.php" id="form" method="get">
+					<div style="display:block;">
+						<p>入住时间</p>
+						<input id="scroller_in"/><p class="rightText" id="leaveTime" style="display:none;">离开时间</p>
+						<input id="scroller_out" style="display:none;"/>
+						<!-- 下面是计算好的入住天数，数值储存在value属性中 -->
+						<input id="days" style="display:none" value="null"/>
+					</div>
+					<div>
+						<p>&#12288;&#12288;房型</p>
+						<select>
+							<option value="1">单人房</option>
+							<option value="2">标准房</option>
+							<option value="3">商务套房</option>
+							<option value="4">总统套房</option>
+						</select><p class="rightText">房间数量</p>
+						<input name="roomAccount" type="text"/>
+					</div>
+					<div>
+						<p>成人数量</p>
+						<input name="adult"/><p class="rightText">儿童数量</p>
+						<input name="children"/>
+					</div>
+					<div>
+						<p>手机号码</p>
+						<input name="phoneNumber"/>
+						<a href="#" class="submitBtn" style="">立即预订</a>
+					</div>
+				</form>
 				<div>
 					<p style="width:auto;color:#e1c684;">服务热线 202-6189-7333</p>
 				</div>
@@ -71,12 +73,13 @@
 				<p>礼途酒店是广东盛大投资集团旗下的精品商务酒店。位于全新的广州中央商务区——广州市越秀区建设六马路46号，紧邻广东省人民政府、省委党校和友谊商店、丽柏广场、世贸大厦等建筑群。酒店交通便利，步行8分钟可达五号线淘金站，距离机场仅40分钟车程。</p>
 				<img src="images/first_page_qrcode.jpg"/>
 			</div><div class="news box" style="">
+				<!-- 以下每一条链接是一个动态/活动，请后台生成链接地址。链接标题字数随意，超长的标题会被截掉。放六到八条最新的即可，不要全部放进来，否则会出现滚动条 -->
 				<h2>酒店动态 / Hotel News</h2>
-				<a href="#">>2015-11-01 光棍节预订活动，送很多很多很多神秘礼物噢</a>
-				<a href="#">>2015-11-01 光棍节预订活动，送很多很多很多神秘礼物噢</a>
-				<a href="#">>2015-11-01 光棍节预订活动，送很多很多很多神秘礼物噢</a>
-				<a href="#">>2015-11-01 光棍节预订活动，送很多很多很多神秘礼物噢</a>
-				<a href="#">>2015-11-01 光棍节预订活动，送很多很多很多神秘礼物噢</a>
+				<a href="activity.html?index=">>2015-11-11 光棍节预订活动，送很多很多很多神秘礼物噢</a>
+				<a href="activity.html?index=">>2015-11-11 光棍节预订活动，送很多很多很多神秘礼物噢</a>
+				<a href="activity.html?index=">>2015-11-11 光棍节预订活动，送很多很多很多神秘礼物噢</a>
+				<a href="activity.html?index=">>2015-11-11 光棍节预订活动，送很多很多很多神秘礼物噢</a>
+				<a href="activity.html?index=">>2015-11-11 光棍节预订活动，送很多很多很多神秘礼物噢</a>
 			</div>
 			<div style="position:relative;">
 			<div class="links" style="width:71%;">
